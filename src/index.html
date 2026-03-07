@@ -6,91 +6,121 @@
   <link href="./output.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
-<body class="bg-[#D9D9D9]">
- <header class="relative overflow-hidden min-h-screen bg-[#D9D9D9] ">
-    
-  <nav class="flex justify-center items-center h-16 w-full">
-    <div class="hidden md:flex gap-10 font-bold text-[#2A2A2A] uppercase tracking-wide">
-      <a href="#" class="hover:opacity-70 transition-opacity">About</a>
-      <a href="#" class="hover:opacity-70 transition-opacity">Gallery</a>
-      <a href="#" class="hover:opacity-70 transition-opacity">Contact</a>
-    </div>
-<div class="absolute inset-0  mix-blend-overlay pointer-events-none "
-    style="background-image: url(../bg/DESIGNSYNDROME-PAPERCUT-TEXTURE---TRANSPARENT24.png); " class="background-size: cover; background-position: center;">
-    <button class="md:hidden absolute right-6 top-6 flex flex-col justify-between w-8 h-3 group" onclick="toggleMenu()">
-      <span class="w-full h-[2px] bg-[#2A2A2A] rounded-full"></span>
-      <span class="w-full h-[2px] bg-[#2A2A2A] rounded-full"></span>
-    </button>
-  </nav>
-
-  <div id="mobileMenu" class="fixed inset-0 bg-[#2A2A2A] z-50 translate-x-full  transition-transform duration-300 ease-in-out md:hidden flex flex-col p-10">
-    <button class="self-end w-8 h-8 text-white text-3xl mb-10" onclick="toggleMenu()">&times;</button>
-    <div class="flex flex-col gap-8 font-bold text-[#D9D9D9] text-4xl uppercase">
-      <a href="#">About</a>
-      <a href="#">Gallery</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
-  <div class="justify-center ">
-    <h1 class="text-[#2a2a2a] p-3 md:text-center md:text-9xl font-bold text-6xl">Lorem Ipsum</h1>
-    <h3 class="text-[#2a2a2a] p-3 md:text-center md:text-7xl font-thin text-5xl">Lorem ipsum dolor sit amet.</h3>
-  </div>
+<body class="bg-[#2A2A2A] overflow-x-hidden"> 
   
-  <div class="absolute -bottom-15 md:-bottom-60 left-1/2 -translate-x-1/2 flex items-end justify-center h-[60vh] md:h-1/2 pointer-events-none">
-    <div class="w-60 h-80 md:w-120 md:h-150 bg-[#2A2A2A] rounded-2xl border border-[#d9d9d9] -rotate-12 translate-x-20 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-120 fill-mode-backwards pointer-events-auto transition-all duration-300 hover:scale-105 hover:-translate-y-6 hover:-rotate-12">
+  <div id="loadingCurtain" class="fixed inset-0 z-[100] bg-[#2A2A2A] transition-transform duration-[3000ms] ease-in-out pointer-events-none"></div>
+
+<main class="bg-[#D9D9D9] animate-in fade-in slide-in-from-bottom-[50vh] duration-[3000ms] delay-500 ease-out fill-mode-both">
+    
+    <div class="relative overflow-hidden min-h-screen bg-[#D9D9D9] ">
+      
+      <nav class="flex justify-center items-center h-16 w-full relative z-20">
+        <div class="hidden md:flex gap-10 font-bold text-[#2A2A2A] uppercase tracking-wide">
+          <a href="#" class="hover:opacity-70 transition-opacity">About</a>
+          <a href="#" class="hover:opacity-70 transition-opacity">Gallery</a>
+          <a href="#" class="hover:opacity-70 transition-opacity">Contact</a>
+        </div>
+        
+        <button class="md:hidden absolute right-6 top-6 flex flex-col justify-between w-8 h-3 group" onclick="toggleMenu()">
+          <span class="w-full h-[2px] bg-[#2A2A2A] rounded-full"></span>
+          <span class="w-full h-[2px] bg-[#2A2A2A] rounded-full"></span>
+        </button>
+      </nav>
+
+      <div class="absolute inset-0 mix-blend-overlay pointer-events-none z-10" style="background-image: url(../bg/DESIGNSYNDROME-PAPERCUT-TEXTURE---TRANSPARENT24.png); background-size: cover; background-position: center;">
+      </div>
+
+      <div id="mobileMenu" class="fixed inset-0 bg-[#2A2A2A] z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-10">
+        <button class="self-end w-8 h-8 text-white text-3xl mb-10" onclick="toggleMenu()">&times;</button>
+        <div class="flex flex-col gap-8 font-bold text-[#D9D9D9] text-4xl uppercase">
+          <a href="#">About</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      
+      <div class="justify-center relative z-20">
+        <h1 class="text-[#2a2a2a] p-3 md:text-center md:text-9xl font-bold text-6xl">Lorem Ipsum</h1>
+        <h3 class="text-[#2a2a2a] p-3 md:text-center md:text-7xl font-thin text-5xl">Lorem ipsum dolor sit amet.</h3>
+      </div>
+      
+      <div class="absolute -bottom-15 md:-bottom-50 left-1/2 -translate-x-1/2 flex items-end justify-center h-[60vh] md:h-1/2 pointer-events-none z-20">
+    
+    <div class="w-60 h-80 md:w-120 md:h-150 bg-[#2A2A2A] rounded-2xl border border-[#d9d9d9] -rotate-12 translate-x-20 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-1000 fill-mode-backwards pointer-events-auto transition-all hover:scale-105 hover:-translate-y-6 hover:z-50 ![transition-duration:300ms] ![transition-delay:0ms]">
         <img src="../img/The IRISHMAN.png" class="rounded-2xl border ">
     </div>
-    <div class="w-60 h-80 md:w-120 md:h-150 bg-[#2A2A2A] rounded-2xl border border-[#d9d9d9] -rotate-6 translate-x-10 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-200 fill-mode-backwards pointer-events-auto transition-all duration-300 hover:scale-105 hover:-translate-y-6 hover:-rotate-6">
-        <img src="../img/Lost and Found 12 x 18.png" class="rounded-2xl border">
+    
+    <div class="w-60 h-80 md:w-120 md:h-150 bg-[#2A2A2A] rounded-2xl border border-[#d9d9d9] -rotate-6 translate-x-10 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-1100 fill-mode-backwards pointer-events-auto transition-all hover:scale-105 hover:-translate-y-6 hover:z-50 ![transition-duration:300ms] ![transition-delay:0ms]">
+        <img src="../img/Lost and Found 12 x 18.png" class="rounded-2xl border ">
     </div>
-    <div class="w-60 h-80 md:w-120 md:h-150 bg-[#2A2A2A] rounded-2xl border border-[#d9d9d9] z-10 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-300 fill-mode-backwards pointer-events-auto transition-all duration-300 hover:scale-105 hover:-translate-y-6">
-        <img src="../img/Plague Doctor.png " class="rounded-2xl border">
+    
+    <div class="w-60 h-80 md:w-120 md:h-150 bg-[#2A2A2A] rounded-2xl border border-[#d9d9d9] z-10 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-1200 fill-mode-backwards pointer-events-auto transition-all hover:scale-105 hover:-translate-y-6 hover:z-50 ![transition-duration:300ms] ![transition-delay:0ms]">
+        <img src="../img/Plague Doctor.png " class="rounded-2xl border ">
     </div>
-    <div class="w-60 h-80 md:w-120 md:h-150 bg-[#2A2A2A] rounded-2xl border border-[#d9d9d9] rotate-6 -translate-x-10 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-400 fill-mode-backwards pointer-events-auto transition-all duration-300 hover:scale-105 hover:-translate-y-6 hover:rotate-6">
-        <img src="../img/Asap Rocky.png" class="rounded-2xl border">
+    
+    <div class="w-60 h-80 md:w-120 md:h-150 bg-[#2A2A2A] rounded-2xl border border-[#d9d9d9] rotate-6 -translate-x-10 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-1300 fill-mode-backwards pointer-events-auto transition-all hover:scale-105 hover:-translate-y-6 hover:z-50 ![transition-duration:300ms] ![transition-delay:0ms]">
+        <img src="../img/Asap Rocky.png" class="rounded-2xl border ">
     </div>   
-    <div class="w-60 h-80 md:w-120 md:h-150 bg-[#2A2A2A] rounded-2xl border border-[#d9d9d9] rotate-12 -translate-x-20 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-500 fill-mode-backwards pointer-events-auto transition-all duration-300 hover:scale-105 hover:-translate-y-6 hover:rotate-12">
-        <img src="../img/Tyler The Creator Flower Boy.png" class="rounded-2xl w-auto">
-    </div>
-</div>
-</div>
-</header>
-<section class="bg-[#2a2a2a] relative">
-    <div class="absolute inset-0 mix-blend-overlay pointer-events-none bg-cover bg-center opacity-20"
-         style="background-image: url('../bg/DESIGNSYNDROME-PAPERCUT-TEXTURE---TRANSPARENT59.png');">
-    </div>
     
-    <h1 class="relative z-10 text-center font-mono text-[#d9d9d9] pt-5 pb-8 md:text-6xl">Lorem ipsum title</h1>
-    
-    <div class="relative z-10 p-8">
-       <div class="flex flex-nowrap md:flex-row flex-col md:space-x-4 space-y-4 pb-10 justify-center">
-        <div class="border-white bg-[#d9d9d9] md:w-80 md:h-100 w-80 h-100 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-120 fill-mode-backwards">01</div>
-        <div class="border-white bg-[#d9d9d9] md:w-80 md:h-100 w-80 h-100 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-120 fill-mode-backwards">01</div>
-        <div class="border-white bg-[#d9d9d9] md:w-80 md:h-100 w-80 h-100 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-120 fill-mode-backwards">01</div>
-      </div>  
+    <div class="w-60 h-80 md:w-120 md:h-150 bg-[#2A2A2A] rounded-2xl border border-[#d9d9d9] rotate-12 -translate-x-20 animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-1400 fill-mode-backwards pointer-events-auto transition-all hover:scale-105 hover:-translate-y-6 hover:z-50 ![transition-duration:300ms] ![transition-delay:0ms]">
+        <img src="../img/Tyler The Creator Flower Boy.png" class="rounded-2xl border ">
     </div>
-</section>
-<section class="bg-[#2a2a2a] p-20">
-    <div class="justify-center text-center ">
-        <h1 class="font-light font-mono md:text-5xl text-[#d9d9d9] p-5">Expert field</h1>
-        <h4 class="font-mono font-thin text-[#747474] uppercase md:text-2xl p-5 ">Poster Design / UI UX Design / GUI Design</h4>
-        <h4 class="font-mono font-thin text-[#747474] uppercase md:text-2xl ">Web Design</h4>
 
-       
-    </div>
-</section>
-<section class="bg-[#2a2a2a] p-20">
- <div class="text-center">
-            <h1 class="font-light font-mono text-[#d9d9d9] md:text-5xl">Contact now</h1>
-            
-            
-        </div>
-</section>
-<script>
+</div>
+     
+      </div>
+    </header>
+
+    <section class="bg-[#2a2a2a] relative">
+      <div class="absolute inset-0 mix-blend-overlay pointer-events-none bg-cover bg-center opacity-20"
+           style="background-image: url('../bg/DESIGNSYNDROME-PAPERCUT-TEXTURE---TRANSPARENT59.png');">
+      </div>
+      
+      <h1 class="relative z-10 text-center font-mono text-[#d9d9d9] pt-5 pb-8 md:text-6xl">Lorem ipsum title</h1>
+      
+      <div class="relative z-10 p-8">
+         <div class="flex flex-nowrap md:flex-row flex-col md:space-x-4 space-y-4 pb-10 justify-center">
+          <div class="border-white bg-[#d9d9d9] md:w-80 md:h-100 w-80 h-100">01</div>
+          <div class="border-white bg-[#d9d9d9] md:w-80 md:h-100 w-80 h-100">01</div>
+          <div class="border-white bg-[#d9d9d9] md:w-80 md:h-100 w-80 h-100">01</div>
+        </div>  
+      </div>
+    </section>
+
+    <section class="bg-[#2a2a2a] p-20">
+      <div class="justify-center text-center ">
+          <h1 class="font-light font-mono md:text-5xl text-[#d9d9d9] p-5">Expert field</h1>
+          <h4 class="font-mono font-thin text-[#747474] uppercase md:text-2xl p-5 ">Poster Design / UI UX Design / GUI Design</h4>
+          <h4 class="font-mono font-thin text-[#747474] uppercase md:text-2xl ">Web Design</h4>
+      </div>
+    </section>
+
+    <section class="bg-[#2a2a2a] p-20">
+      <div class="text-center">
+          <h1 class="font-light font-mono text-[#d9d9d9] md:text-5xl">Contact now</h1>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    window.addEventListener('load', () => {
+    const curtain = document.getElementById('loadingCurtain');
+    
+    setTimeout(() => {
+      curtain.classList.add('-translate-y-full');
+      
+      setTimeout(() => {
+        curtain.style.display = 'none';
+      }, 3000); // <-- Changed this to 3000 to match the 3-second CSS duration
+      
+    }, 500); 
+  });
+
   function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
     menu.classList.toggle('translate-x-full');
   }
-</script>
+  </script>
 </body>
 </html>
