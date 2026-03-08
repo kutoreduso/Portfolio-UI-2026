@@ -29,17 +29,32 @@
 
       <div class="absolute inset-0 mix-blend-overlay pointer-events-none z-10" style="background-image: url(../bg/DESIGNSYNDROME-PAPERCUT-TEXTURE---TRANSPARENT24.png); background-size: cover; background-position: center;">
       </div>
-
-      <div id="mobileMenu" class="fixed inset-0 bg-[#2A2A2A] z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-10">
-        <button class="self-end w-8 h-8 text-white text-3xl mb-10" onclick="toggleMenu()">&times;</button>
-        <div class="flex flex-col gap-8 font-bold text-[#D9D9D9] text-4xl uppercase">
-          <a href="#">About</a>
-          <a href="#">Gallery</a>
-          <a href="#">Contact</a>
-        </div>
-      </div>
-      
-      <div class="justify-center relative z-20">
+<div id="mobileMenu" class="group fixed inset-0 bg-[#2A2A2A] z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-10">
+  <div class="absolute inset-0 mix-blend-overlay pointer-events-none bg-cover bg-center opacity-80"
+       style="background-image: url('../bg/DESIGNSYNDROME-PAPERCUT-TEXTURE---TRANSPARENT24.png');">
+  </div>
+  <button class="md:hidden absolute right-6 top-6 flex flex-col justify-between w-8 h-3 group text-[#d9d9d9]" onclick="toggleMenu()">
+    <span class="w-full h-[2px] bg-[#d9d9d9] rounded-full"></span>
+          <span class="w-full h-[2px] bg-[#d9d9d9] rounded-full"></span>
+  </button>
+  
+  <div class="flex flex-col gap-8 font-bold text-[#D9D9D9] text-4xl uppercase pt-20">
+    
+    <a href="#" class="block w-[85%] opacity-0 translate-y-8 transition-all duration-500 ease-out delay-100 group-[.is-open]:opacity-100 group-[.is-open]:translate-y-0 border-b border-[#D9D9D9]/70 pb-3 hover:text-white hover:border-white">
+      About
+    </a>
+    
+    <a href="#" class="block w-[85%] opacity-0 translate-y-8 transition-all duration-500 ease-out delay-200 group-[.is-open]:opacity-100 group-[.is-open]:translate-y-0 border-b border-[#D9D9D9]/70 pb-3 hover:text-white hover:border-white">
+      Gallery
+    </a>
+    
+    <a href="#" class="block w-[85%] opacity-0 translate-y-8 transition-all duration-500 ease-out delay-300 group-[.is-open]:opacity-100 group-[.is-open]:translate-y-0 border-b border-[#D9D9D9]/70 pb-3 hover:text-white hover:border-white">
+      Contact
+    </a>
+    
+  </div>
+</div>
+<div class="justify-center relative z-20">
   <h1 class="text-[#2a2a2a] p-3 md:text-center md:text-9xl text-6xl gsap-text" style="opacity: 0;">
     <span class="font-normal">Lorem</span> 
     <span class="font-thin font-serif">Ipsum</span>
@@ -231,9 +246,14 @@
   });
 
   function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    menu.classList.toggle('translate-x-full');
-  }
+  const menu = document.getElementById('mobileMenu');
+  
+  // Slides the dark background in/out
+  menu.classList.toggle('translate-x-full');
+  
+  // Triggers the 1-by-1 links sliding from bottom-left to right
+  menu.classList.toggle('is-open');
+}
   </script>
 </body>
 </html>
