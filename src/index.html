@@ -40,11 +40,13 @@
       </div>
       
       <div class="justify-center relative z-20">
-  <h1 class="text-[#2a2a2a] p-3 md:text-center md:text-9xl font-bold text-6xl gsap-text" style="opacity: 0;">
-    Lorem Ipsum
+  <h1 class="text-[#2a2a2a] p-3 md:text-center md:text-9xl text-6xl gsap-text" style="opacity: 0;">
+    <span class="font-normal">Lorem</span> 
+    <span class="font-thin font-serif">Ipsum</span>
   </h1>
   <h3 class="text-[#2a2a2a] p-3 md:text-center md:text-7xl font-thin text-5xl gsap-text" style="opacity: 0;">
-    Lorem ipsum dolor sit amet.
+    <span class="font-serif">Lorem ipsum</span>
+    <span class="font-serif"> dolor sit amet.</span>
   </h3>
 </div>
       
@@ -93,21 +95,31 @@
 
     <section class="bg-[#2a2a2a] p-20">
       <div class="justify-center text-center ">
-          <h1 class="font-light font-mono md:text-5xl text-[#d9d9d9] p-5">Expert field</h1>
-          <h4 class="font-mono font-thin text-[#747474] uppercase md:text-2xl p-5 ">Poster Design / UI UX Design / GUI Design</h4>
+          <h1 class="font-light font-mono md:text-5xl text-[#d9d9d9] p-5 text-4xl">Expert field</h1>
+          <h4 class="font-mono font-thin text-[#747474] uppercase md:text-2xl  p-5 ">Poster Design / UI UX Design / GUI Design</h4>
           <h4 class="font-mono font-thin text-[#747474] uppercase md:text-2xl ">Web Design</h4>
+      </div>
+
+      <div class="font-serif text-[#d9d9d9] text-center">
+        <h4 class="md:text-2xl pt-10">"Minimalism is not a lack of something. It’s simply the perfect amount of something."</h4>
+        <h4 class="md:text-2xl">— Nicholas Burroughs</h4>
       </div>
     </section>
 
-    <section class="bg-[#2a2a2a] pb-8 p-10 md:p-20">
-  <div class="md:text-center text-start">
+    <section class="relative bg-[#2a2a2a] pb-8 p-10 md:p-20">
+  
+  <div class="absolute inset-0 mix-blend-overlay pointer-events-none bg-cover bg-center opacity-20"
+       style="background-image: url('../bg/DESIGNSYNDROME-PAPERCUT-TEXTURE---TRANSPARENT59.png');">
+  </div>
+      
+  <div class="md:text-center text-start relative z-10">
     <h1 class="font-light font-mono text-[#d9d9d9] md:text-5xl pb-10 text-5xl">Contact now</h1>
   </div>
-  <div class="md:text-center text-start">
+  <div class="md:text-center text-start relative z-10">
     <h2 class="font-mono font-thin text-[#747474] md:text-3xl pb-5 pt-5 text-3xl">Have an idea? Let's bring it to life together.</h2>
   </div>
 
-  <div class="flex flex-col md:flex-row justify-between gap-10 md:gap-20 pt-10 pb-10 max-w-7xl mx-auto">
+  <div class="flex flex-col md:flex-row justify-between gap-10 md:gap-20 pt-10 pb-10 max-w-7xl mx-auto relative z-10">
     
     <div class="w-full md:w-1/2">
       <form action="#" method="POST" class="flex flex-col gap-8">
@@ -144,8 +156,14 @@
           </button>
         </div>
       </form>
+      <div class="font-mono pt-3">
+        <h1 class="text-[#747474] font-bold text-2xl">Tell us about your project.</h1>
+        <h1 class="text-[#747474] font-bold text-2xl">Let’s collaborate.</h1>
+        <h1 class="text-[#d9d9d9] font-light md:text-2xl">● 64+ 977 233 4221</h1>
+        <h1 class="text-[#d9d9d9] font-light md:text-2xl">● kurtcantiga17@gmail.com</h1>
     </div>
-
+    </div>
+    
     <div class="w-full md:w-1/2 flex flex-col items-start md:items-end gap-6">
       <div class="flex items-end p-5 md:w-80 md:h-32 border w-full sm:w-60 h-20 border-[#d9d9d9]">
         <a href="#" class="text-[#d9d9d9] font-bold">Linkedin</a>
@@ -159,9 +177,10 @@
     </div>
 
   </div>
-
-  <div class="md:text-center text-start pt-20">
-    <p class="font-mono text-[#747474] text-sm">© 2026 Designed & Built by You</p>
+    </section>
+<section>
+  <div class="bg-[#2a2a2a] md:text-center  pt-20 text-2xl text-center">
+    <p class="font-mono text-[#747474] ">© 2026 Designed & Built by You</p>
   </div>
 </section>
 
