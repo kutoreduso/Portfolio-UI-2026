@@ -80,8 +80,8 @@
            style="background-image: url('../bg/DESIGNSYNDROME-PAPERCUT-TEXTURE---TRANSPARENT59.png');">
       </div>
       
-      <h1 class="relative z-10 text-center font-mono text-[#d9d9d9] pt-5 pb-8 md:text-6xl">Lorem ipsum title</h1>
-      
+      <h1 class="relative z-10 text-center font-mono text-[#d9d9d9] pt-10 md:text-6xl">Latest Project</h1>
+        <h1 class="md:text-3xl text-center font-thin font-mono pt-3 text-[#747474]">A closer look at my most recent work</h1>
       <div class="relative z-10 p-8">
          <div class="flex flex-nowrap md:flex-row flex-col md:space-x-4 space-y-4 pb-10 justify-center">
           <div class="border-white bg-[#d9d9d9] md:w-80 md:h-100 w-80 h-100">01</div>
@@ -99,26 +99,71 @@
       </div>
     </section>
 
-    <section class="bg-[#2a2a2a] pb-8 p-20">
-      <div class="text-center">
-          <h1 class="font-light font-mono text-[#d9d9d9] md:text-5xl pb-10 ">Contact now</h1>
-      </div>
-      <div class="flex justify-center md:justify-center p-5 md:pl-90">
-        <div  class="flex items-end p-5 md:w-80 md:h-50 border border-[#d9d9d9]">
-          <a href="#" class="text-[#d9d9d9] font-bold">Linkedin</a>
-        </div>
-      </div>
-      <div class="flex justify-center md:justify-end p-5 md:pr-60">
-        <div  class="flex items-end p-5 md:w-80 md:h-50 border border-[#d9d9d9]">
-          <a href="#" class="text-[#d9d9d9] font-bold">Github</a>
-        </div>
-      </div>
-      <div class="flex justify-center md:justify-center p-5 md:pl-70">
-  <div class="flex items-end p-5 md:w-80 md:h-50 border border-[#d9d9d9]">
-    <a href="#" class="text-[#d9d9d9] font-bold">Instagram</a>
+    <section class="bg-[#2a2a2a] pb-8 p-10 md:p-20">
+  <div class="md:text-center text-start">
+    <h1 class="font-light font-mono text-[#d9d9d9] md:text-5xl pb-10 text-5xl">Contact now</h1>
   </div>
-</div>
-    </section>
+  <div class="md:text-center text-start">
+    <h2 class="font-mono font-thin text-[#747474] md:text-3xl pb-5 pt-5 text-3xl">Have an idea? Let's bring it to life together.</h2>
+  </div>
+
+  <div class="flex flex-col md:flex-row justify-between gap-10 md:gap-20 pt-10 pb-10 max-w-7xl mx-auto">
+    
+    <div class="w-full md:w-1/2">
+      <form action="#" method="POST" class="flex flex-col gap-8">
+        <div class="flex flex-col gap-8">
+          <input 
+            type="text" 
+            name="name" 
+            placeholder="Name" 
+            required 
+            class="w-full bg-transparent border-b border-[#747474] text-[#d9d9d9] font-mono pb-2 focus:outline-none focus:border-[#d9d9d9] transition-colors placeholder:text-[#747474]"
+          >
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Email" 
+            required 
+            class="w-full bg-transparent border-b border-[#747474] text-[#d9d9d9] font-mono pb-2 focus:outline-none focus:border-[#d9d9d9] transition-colors placeholder:text-[#747474]"
+          >
+        </div>
+        <textarea 
+          name="message" 
+          placeholder="Message" 
+          rows="1" 
+          required 
+          class="w-full bg-transparent border-b border-[#747474] text-[#d9d9d9] font-mono pb-2 focus:outline-none focus:border-[#d9d9d9] transition-colors placeholder:text-[#747474] resize-none overflow-hidden"
+        ></textarea>
+        
+        <div class="text-start mt-4">
+          <button 
+            type="submit" 
+            class="text-[#d9d9d9] font-mono font-bold uppercase tracking-widest text-sm hover:text-white transition-colors"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="w-full md:w-1/2 flex flex-col items-start md:items-end gap-6">
+      <div class="flex items-end p-5 md:w-80 md:h-32 border w-full sm:w-60 h-20 border-[#d9d9d9]">
+        <a href="#" class="text-[#d9d9d9] font-bold">Linkedin</a>
+      </div>
+      <div class="flex items-end p-5 md:w-80 md:h-32 border w-full sm:w-60 h-20 border-[#d9d9d9]">
+        <a href="#" class="text-[#d9d9d9] font-bold">Github</a>
+      </div>
+      <div class="flex items-end p-5 md:w-80 md:h-32 border w-full sm:w-60 h-20 border-[#d9d9d9]">
+        <a href="#" class="text-[#d9d9d9] font-bold">Instagram</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="md:text-center text-start pt-20">
+    <p class="font-mono text-[#747474] text-sm">© 2026 Designed & Built by You</p>
+  </div>
+</section>
 
   </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
