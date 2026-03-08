@@ -602,6 +602,9 @@
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
   }
+  .break-all {
+    word-break: break-all;
+  }
   .text-\[\#2A2A2A\] {
     color: #2A2A2A;
   }
