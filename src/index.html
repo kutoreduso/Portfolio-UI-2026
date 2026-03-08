@@ -108,28 +108,29 @@
   </div>
   
   <div class="text-[#d9d9d9] p-4 text-justify font-mono font-thin">
-    <h1 class="md:text-5xl ">
+    <h1 class="md:text-5xl scroll-animate-text" style="opacity: 0;">
       Designing and developing modern, responsive, and efficient digital 
       solutions that address real-world problems through 
       technology. on applying strong technical knowledge, structured development practices, 
       and continuous learning to build reliable and meaningful systems.
     </h1>
-    </div>
+</div>
             </div>
             
   
       </div>
       </div>
       </div>
-         <div class="flex md:flex-row p-10 md:justify-end text-[#d9d9d9] font-mono font-thin">
-          <h1 class="md:text-5xl">The art of designing and development explores creativity and innovation in 
-            building modern digital solutions. 
-            By combining creative thinking with technical implementation, ideas are transformed into practical systems while 
-            continuously developing knowledge 
-            and skills in information technology.</h1>
-              <div class="border-white  justify-center  bg-[#d9d9d9] md:w-150 md:h-150 w-80 h-100 shrink-0">
-              </div>
-      </div>
+
+<div class="flex md:flex-row p-10 md:justify-end text-[#d9d9d9] font-mono font-thin">
+    <h1 class="md:text-5xl scroll-animate-text " style="opacity: 0;">The art of designing and development explores creativity and innovation in 
+        building modern digital solutions. 
+        By combining creative thinking with technical implementation, ideas are transformed into practical systems while 
+        continuously developing knowledge 
+        and skills in information technology.</h1>
+        <div class="border-white  justify-center  bg-[#d9d9d9] md:w-150 md:h-150 w-80 h-100 shrink-0">
+        </div>
+</div>
     </section>
 
     <section class="bg-[#2a2a2a] relative p-20">
@@ -225,59 +226,83 @@
 
   </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/split-type"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", (event) => {
+  // Register ScrollTrigger so GSAP knows how to use it
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("DOMContentLoaded", (event) => {
     
-    // Split the text into individual characters
+    // --- 1. HERO TEXT ANIMATION (Plays immediately on load) ---
     const textElements = new SplitType('.gsap-text', { types: 'chars' });
-    
-    // Remove the inline opacity: 0 we used to hide the text during page load
     gsap.set('.gsap-text', { opacity: 1 });
 
-    // Apply the exact animation from the React code you provided
     gsap.fromTo(textElements.chars, 
-      { 
-        // Starting state
-        skewX: -30, 
-        filter: "blur(10px) brightness(0%)",
-        opacity: 0,
-        willChange: "filter, transform"
-      },
-      { 
-        // Ending state
-        skewX: 0, 
-        filter: "blur(0px) brightness(100%)",
-        opacity: 1,
-        duration: 0.5, 
-        stagger: 0.05, // The delay between each letter appearing
-        ease: "none",
-        delay: 0.2 // A small delay before the whole animation starts
-      }
+      { skewX: -30, filter: "blur(10px) brightness(0%)", opacity: 0, willChange: "filter, transform" },
+      { skewX: 0, filter: "blur(0px) brightness(100%)", opacity: 1, duration: 0.5, stagger: 0.05, ease: "none", delay: 0.2 }
     );
+
+    // --- 2. SCROLL ANIMATIONS (Plays when you scroll down) ---
+    const scrollTexts = document.querySelectorAll('.scroll-animate-text');
+
+    scrollTexts.forEach((text) => {
+      // Split each scroll text block
+      const splitScrollText = new SplitType(text, { types: 'chars' });
+      
+      // Make the container visible again
+      gsap.set(text, { opacity: 1 });
+
+      // Create the ScrollTrigger animation using the exact effect from your React code
+      gsap.fromTo(splitScrollText.chars, 
+        { 
+          skewX: -30, 
+          filter: "blur(10px) brightness(0%)",
+          opacity: 0,
+          willChange: "filter, transform"
+        },
+        { 
+          skewX: 0, 
+          filter: "blur(0px) brightness(100%)",
+          opacity: 1,
+          duration: 0.5, 
+          stagger: 0.02, // Slightly faster stagger so long paragraphs don't take too long
+          ease: "none",
+          scrollTrigger: {
+            trigger: text, // The animation triggers when this specific element scrolls into view
+            start: "top 85%", // Starts when the top of the text hits 85% down the screen
+            toggleActions: "play none none none" // Plays once and stays
+          }
+        }
+      );
+    });
+
   });
-    window.addEventListener('load', () => {
+
+  // Loading Curtain Logic
+  window.addEventListener('load', () => {
     const curtain = document.getElementById('loadingCurtain');
-    
     setTimeout(() => {
       curtain.classList.add('-translate-y-full');
-      
       setTimeout(() => {
         curtain.style.display = 'none';
-      }, 3000); // <-- Changed this to 3000 to match the 3-second CSS duration
-      
+      }, 3000); 
     }, 500); 
   });
 
+  // Menu Toggles
   function toggleMenu() {
-  const menu = document.getElementById('mobileMenu');
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('translate-x-full');
+    menu.classList.toggle('is-open');
+  }
   
-  // Slides the dark background in/out
-  menu.classList.toggle('translate-x-full');
-  
-  // Triggers the 1-by-1 links sliding from bottom-left to right
-  menu.classList.toggle('is-open');
-}
-  </script>
+  function toggleGallery(event) {
+    if(event) event.preventDefault(); 
+    const gallery = document.getElementById('galleryMenu');
+    gallery.classList.toggle('-translate-y-full');
+    gallery.classList.toggle('is-open');
+  }
+</script>
 </body>
 </html>
