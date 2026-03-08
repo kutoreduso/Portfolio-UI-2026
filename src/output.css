@@ -250,6 +250,9 @@
   .z-20 {
     z-index: 20;
   }
+  .z-30 {
+    z-index: 30;
+  }
   .z-50 {
     z-index: 50;
   }
@@ -349,6 +352,9 @@
   .w-full {
     width: 100%;
   }
+  .w-screen {
+    width: 100vw;
+  }
   .max-w-2xl {
     max-width: var(--container-2xl);
   }
@@ -357,6 +363,9 @@
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
+  }
+  .max-w-\[100vw\] {
+    max-width: 100vw;
   }
   .flex-grow {
     flex-grow: 1;
@@ -575,6 +584,9 @@
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
   }
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
   }
@@ -589,6 +601,9 @@
   }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
+  }
+  .pt-32 {
+    padding-top: calc(var(--spacing) * 32);
   }
   .pt-100 {
     padding-top: calc(var(--spacing) * 100);
@@ -1101,6 +1116,11 @@
   .md\:px-0 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:pt-20 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 20);
     }
   }
   .md\:pr-5 {
