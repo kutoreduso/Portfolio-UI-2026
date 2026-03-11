@@ -7,19 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-gray-300: oklch(87.2% 0.01 258.338);
-    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-sm: 24rem;
-    --container-4xl: 56rem;
-    --container-6xl: 72rem;
-    --text-sm: 0.875rem;
-    --text-sm--line-height: calc(1.25 / 0.875);
-    --text-base: 1rem;
-    --text-base--line-height: calc(1.5 / 1);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -32,23 +21,13 @@
     --text-6xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
-    --text-8xl: 6rem;
-    --text-8xl--line-height: 1;
     --text-9xl: 8rem;
     --text-9xl--line-height: 1;
     --font-weight-thin: 100;
     --font-weight-light: 300;
-    --font-weight-medium: 500;
     --font-weight-bold: 700;
-    --font-weight-black: 900;
-    --tracking-tighter: -0.05em;
-    --tracking-tight: -0.025em;
     --tracking-wide: 0.025em;
-    --tracking-widest: 0.1em;
-    --leading-relaxed: 1.625;
-    --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
-    --radius-3xl: 1.5rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -223,9 +202,6 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
-  .end {
-    inset-inline-end: var(--spacing);
-  }
   .top-6 {
     top: calc(var(--spacing) * 6);
   }
@@ -235,7 +211,24 @@
   .-bottom-15 {
     bottom: calc(var(--spacing) * -15);
   }
-
+  .left-1\/2 {
+    left: calc(1 / 2 * 100%);
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
+  .flex {
+    display: flex;
+  }
+  .hidden {
+    display: none;
+  }
   .h-3 {
     height: calc(var(--spacing) * 3);
   }
@@ -269,20 +262,11 @@
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
-<
   .w-auto {
     width: auto;
   }
   .w-full {
     width: 100%;
-  }
-
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .-translate-x-1 {
-    --tw-translate-x: calc(var(--spacing) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
@@ -296,7 +280,6 @@
     --tw-translate-x: calc(var(--spacing) * -20);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-
   .translate-x-10 {
     --tw-translate-x: calc(var(--spacing) * 10);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -305,12 +288,10 @@
     --tw-translate-x: calc(var(--spacing) * 20);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-
   .translate-x-full {
     --tw-translate-x: 100%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-
   .-rotate-6 {
     rotate: calc(6deg * -1);
   }
@@ -323,18 +304,11 @@
   .rotate-12 {
     rotate: 12deg;
   }
-
-  .resize {
-    resize: both;
-  }
   .flex-col {
     flex-direction: column;
   }
   .flex-nowrap {
     flex-wrap: nowrap;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -383,7 +357,6 @@
   .border-white {
     border-color: var(--color-white);
   }
-
   .bg-\[\#2A2A2A\] {
     background-color: #2A2A2A;
   }
@@ -399,7 +372,6 @@
   .bg-\[\#d9d9d9\] {
     background-color: #d9d9d9;
   }
-
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -424,7 +396,6 @@
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
   }
-
   .text-center {
     text-align: center;
   }
@@ -484,19 +455,8 @@
   .uppercase {
     text-transform: uppercase;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .opacity-50 {
-    opacity: 50%;
-
-  }
   .mix-blend-overlay {
     mix-blend-mode: overlay;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition-all {
     transition-property: all;
@@ -716,11 +676,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -759,7 +714,6 @@
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-tracking: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-scale-x: 1;
